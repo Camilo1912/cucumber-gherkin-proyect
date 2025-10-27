@@ -26,7 +26,7 @@ public class BusquedaSteps {
         System.out.println("Paso: Seleccionando Fechas: " + fechaIda + " - " + fechaVuelta);
     }
 
-    @When("hago clic en el botón {string}")
+    @When("hago clic en el botón {string} en vuelos")
     public void hagoClicEnElBoton(String boton) {
         System.out.println("Paso: Clic en botón " + boton);
     }

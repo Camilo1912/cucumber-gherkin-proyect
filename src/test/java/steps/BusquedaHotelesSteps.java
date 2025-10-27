@@ -44,12 +44,12 @@ public class BusquedaHotelesSteps {
         System.out.println("Cuando: Especificando " + adultos + " adultos y " + habitaciones + " habitación(es).");
     }
 
-    @When("hago clic en el botón {string} en hoteles")
+    @When("hago clic en el botón {string} de hoteles")
     public void hagoClicEnElBoton(String boton) {
         System.out.println("Cuando: Clic en el botón: " + boton);
-        if (boton.equals("Buscar Hoteles") && !destinoBuscado.equals("Planeta Krypton")) {
+        if (boton.equals("Buscar") && !destinoBuscado.equals("Esto no existe")) {
             this.resultadosActuales = 12;
-        } else if (boton.equals("Buscar Hoteles") && destinoBuscado.equals("Planeta Krypton")) {
+        } else if (boton.equals("Buscar") && destinoBuscado.equals("Esto no existe")) {
             this.resultadosActuales = 0;
         }
     }
@@ -60,7 +60,7 @@ public class BusquedaHotelesSteps {
         System.out.println("Cuando: Aplicando filtro de " + estrellas + " estrellas.");
     }
     
-    @When("hago clic en el botón {string} de los filtros")
+    @When("hago clic en el botón {string} de filtro de hoteles")
     public void hagoClicEnElBotonDeLosFiltros(String boton) {
         System.out.println("Cuando: Clic en el botón: " + boton);
         

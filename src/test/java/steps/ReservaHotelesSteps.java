@@ -33,21 +33,21 @@ public class ReservaHotelesSteps {
 
     @And("selecciono las siguientes preferencias para la reserva:")
     public void seleccionoLasSiguientesPreferenciasParaLaReserva(io.cucumber.datatable.DataTable dataTable) {
-    java.util.Map<String, String> preferencias = dataTable.asMap(String.class, String.class);
+        java.util.Map<String, String> preferencias = dataTable.asMap(String.class, String.class);
 
-    this.tipoHabitacionActual = preferencias.get("Tipo Habitación");
-    
-    try {
-        this.adultosActual = Integer.parseInt(preferencias.get("Adultos"));
-        this.ninosActual = Integer.parseInt(preferencias.get("Niños"));
-    } catch (NumberFormatException e) {
-        System.err.println("Error al convertir a número: " + e.getMessage());
+        this.tipoHabitacionActual = preferencias.get("Tipo Habitación");
+        
+        try {
+            this.adultosActual = Integer.parseInt(preferencias.get("Adultos"));
+            this.ninosActual = Integer.parseInt(preferencias.get("Niños"));
+        } catch (NumberFormatException e) {
+            System.err.println("Error al convertir a número: " + e.getMessage());
+        }
+
+        System.out.println("Y: Preferencias de habitación seleccionadas:");
+        System.out.println("   - Tipo: " + this.tipoHabitacionActual);
+        System.out.println("   - Adultos: " + this.adultosActual + ", Niños: " + this.ninosActual);
     }
-
-    System.out.println("Y: Preferencias de habitación seleccionadas:");
-    System.out.println("   - Tipo: " + this.tipoHabitacionActual);
-    System.out.println("   - Adultos: " + this.adultosActual + ", Niños: " + this.ninosActual);
-}
 
     @And("^selecciono el servicio adicional de \"([^\"]*)\"$")
     public void seleccionoElServicioAdicionalDe(String servicio) { 

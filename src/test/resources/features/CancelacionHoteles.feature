@@ -1,4 +1,4 @@
-@Cancelacion @HU-004
+@Cancelacion @HU-006
 Feature: Cancelación de Hoteles
   Como usuario de TravelNow
   Quiero cancelar mis reservas de hotel

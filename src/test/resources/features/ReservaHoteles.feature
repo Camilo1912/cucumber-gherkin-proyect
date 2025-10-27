@@ -1,4 +1,4 @@
-@Reserva @PrioridadAlta
+@Reserva @HU-004 @PrioridadAlta
 Feature: Gestión de Reservas
   Como usuario en TravelNow
   Quiero buscar reservar de hoteles disponibles

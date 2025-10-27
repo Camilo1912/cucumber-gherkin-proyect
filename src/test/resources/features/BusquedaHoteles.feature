@@ -11,7 +11,7 @@ Feature: Búsqueda y Filtrado de Hoteles
     When ingreso "Cancún" como destino
     And selecciono la fecha de check-in "2024-03-15" y check-out "2024-03-20"
     And especifico "2" adultos y "1" habitación
-    And hago clic en el botón "Buscar" en hoteles
+    And hago clic en el botón "Buscar" de hoteles
     Then deberia ver al menos 10 hoteles en la lista de resultados
     And todos los hoteles listados deberían estar en "Cancún"
     
@@ -19,7 +19,7 @@ Feature: Búsqueda y Filtrado de Hoteles
   Scenario Outline: Filtrado de hoteles por categoría (estrellas)
     Given he completado una búsqueda exitosa de hoteles en "Nueva York"
     When selecciono la categoria <Estrellas> en los filtros de la pagina
-    And hago clic en el botón "Aplicar Filtros"
+    And hago clic en el botón "Aplicar" de filtro de hoteles
     Then solo se muestran hoteles con <Estrellas> estrellas
     And la cantidad de resultados se reduce
 
@@ -32,6 +32,6 @@ Feature: Búsqueda y Filtrado de Hoteles
   Scenario: Búsqueda sin resultados por destino inexistente
     Given que estoy en la página principal de TravelNow
     When ingreso "Esto no existe" como destino
-    And hago clic en el botón "Buscar Hoteles"
+    And hago clic en el botón "Buscar" de hoteles
     Then debería ver un mensaje que dice "Lo sentimos, no encontramos hoteles en ese destino."
     And la lista de resultados debe estar vacía

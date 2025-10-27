@@ -18,7 +18,7 @@ Feature: Búsqueda de Vuelos
     Given que estoy en la página de inicio de TravelNow
     When ingreso "<Origen>" como ciudad de origen
     And ingreso "<Destino>" como ciudad de destino
-    And hago clic en el botón "Buscar"
+    And hago clic en el botón "Buscar" en vuelos
     Then debería ver vuelos disponibles para la ruta "<Origen>" a "<Destino>"
 
     Examples:

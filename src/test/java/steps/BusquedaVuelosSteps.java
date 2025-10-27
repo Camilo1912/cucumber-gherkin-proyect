@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class BusquedaSteps {
+public class BusquedaVuelosSteps {
 
     @Given("que estoy en la página de inicio de TravelNow")
     public void queEstoyEnLaPaginaDeInicioDeTravelNow() {

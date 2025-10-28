@@ -14,19 +14,17 @@ Feature: Gestión de Reservas
       | Adultos             | <Adultos>       |
       | Niños               | <Ninos>         |
    
-    And selecciono el servicio adicional de "<ServicioAdicional>"
+    And selecciono el servicio adicional de hotel "<ServicioAdicional>"
     And he completado los datos de los huéspedes
-    When confirmo el pago utilizando un saldo de mi Monedero TravelNow
+    When confirmo el pago de hotel utilizando un saldo de mi Monedero TravelNow
     Then la reserva de hotel se confirma con éxito
-    And el detalle de la reserva <ResultadoServicio> el costo del "<ServicioAdicional>"
+    And el detalle de la reserva de hotel <ResultadoServicio> el costo del "<ServicioAdicional>"
  
     Examples:
       | Hotel               | Noches | TipoHabitacion  | Adultos | Ninos | ServicioAdicional   | ResultadoServicio |
       | Hotel Explora       | 3      | Suite           | 2       | 1     | Traslado Aeropuerto | incluye           |
       | Grand Santiago      | 1      | Simple          | 1       | 0     | Ninguno             | NO incluye        |
       | Cabañas del Sur     | 2      | Familiar        | 4       | 2     | Traslado Aeropuerto | incluye           |
-
-      
 
   @SmokeTest @AuthRequerido
   Scenario: Error al crear reserva de hotel pago rechazado

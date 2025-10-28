@@ -12,6 +12,6 @@ import org.junit.runner.RunWith;
         "pretty",
         "html:target/cucumber-reports/reporte.html",
     },
-    tags = "@Cancelacion" 
+    tags = "" 
 )
 public class TestRunner {}

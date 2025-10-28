@@ -49,7 +49,7 @@ public class ReservaHotelesSteps {
         System.out.println("   - Adultos: " + this.adultosActual + ", Niños: " + this.ninosActual);
     }
 
-    @And("^selecciono el servicio adicional de \"([^\"]*)\"$")
+    @And("^selecciono el servicio adicional de hotel \"([^\"]*)\"$")
     public void seleccionoElServicioAdicionalDe(String servicio) { 
         if (!servicio.equalsIgnoreCase("Ninguno")) {
             System.out.println("Y: Servicio extra seleccionado: " + servicio);
@@ -60,7 +60,7 @@ public class ReservaHotelesSteps {
         }
     }
 
-    @When("^confirmo el pago utilizando un saldo de mi Monedero TravelNow$")
+    @When("^confirmo el pago de hotel utilizando un saldo de mi Monedero TravelNow$")
     public void confirmoElPagoUtilizandoUnSaldoDeMiMonederoTravelNow() { 
         System.out.println("CUANDO: Procesando pago con Monedero TravelNow (Éxito simulado).");
         this.pagoProcesado = true;
@@ -72,7 +72,7 @@ public class ReservaHotelesSteps {
         assertTrue(this.pagoProcesado);
     }
 
-    @And("^el detalle de la reserva (incluye|NO incluye) el costo del \"([^\"]*)\"$")
+    @And("^el detalle de la reserva de hotel (incluye|NO incluye) el costo del \"([^\"]*)\"$")
     public void elDetalleDeLaReservaIncluyeONoElCostoDelServicio(String resultadoEsperado, String servicio) { 
         System.out.println("Y: Verificación condicional: el detalle " + resultadoEsperado + " el costo de " + servicio);
         

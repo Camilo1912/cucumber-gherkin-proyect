@@ -13,6 +13,12 @@ public class Hooks {
         System.out.println("Navegador web abierto y maximizado.");
     }
 
+    @Before
+    public void ingresarPaginaTravelNow(Scenario scenario) {
+        System.out.println("*****************************************");
+        System.out.println("HOOK: Se ingresa a la pagina de Travel Now");
+    }
+
     @After
     public void finalizarEntorno(Scenario scenario) {
         if (scenario.isFailed()) {

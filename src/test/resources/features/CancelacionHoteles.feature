@@ -1,4 +1,4 @@
-@Cancelacion @HU-006
+@HU-006 @Cancelacion @Hoteles
 Feature: Cancelación de Hoteles
   Como usuario de TravelNow
   Quiero cancelar mis reservas de hotel
@@ -13,7 +13,7 @@ Feature: Cancelación de Hoteles
     Given que estoy en la página "Mis Reservas"
     When selecciono mi reserva de hotel con código "HT-54321"
     And la fecha de check-in es en más de 48 horas
-    And hago clic en el botón "Cancelar Reserva"
+    And hago clic en el botón "Cancelar Reserva" de cancelar reserva hotel
     And confirmo la cancelación
     Then debería ver el mensaje "Reserva de hotel cancelada sin cargo"
     And debería recibir un email de confirmación
@@ -24,7 +24,7 @@ Feature: Cancelación de Hoteles
     Given que estoy en la página "Mis Reservas"
     When selecciono mi reserva de hotel con código "HT-98765"
     And la fecha de check-in es en menos de 48 horas
-    And hago clic en el botón "Cancelar Reserva"
+    And hago clic en el botón "Cancelar Reserva" de cancelar reserva hotel
     And confirmo la cancelación aceptando el cargo
     Then debería ver el mensaje "Reserva cancelada con cargo de una noche"
     And debería ver el monto del cargo aplicado
@@ -35,7 +35,7 @@ Feature: Cancelación de Hoteles
     Given que estoy en la página "Mis Reservas"
     When selecciono mi reserva de hotel con código "HT-11223"
     And el tipo de tarifa es "No reembolsable"
-    And hago clic en el botón "Cancelar Reserva"
+    And hago clic en el botón "Cancelar Reserva" de cancelar reserva hotel
     Then debería ver el mensaje de advertencia "Esta reserva no es reembolsable"
     And debería ver las opciones "Cancelar de todos modos" o "Mantener reserva"
     And si confirmo debería perder el monto total pagado
@@ -46,7 +46,7 @@ Feature: Cancelación de Hoteles
     When selecciono mi reserva de hotel con código "<codigo_reserva>"
     And faltan "<dias_anticipacion>" días para el check-in
     And la política de cancelación es "<politica>"
-    And hago clic en el botón "Cancelar Reserva"
+    And hago clic en el botón "Cancelar Reserva" de cancelar reserva hotel
     And confirmo la cancelación
     Then el cargo aplicado debería ser "<cargo_aplicado>"
     And debería recibir "<tipo_confirmacion>"

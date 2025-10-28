@@ -1,11 +1,11 @@
-@Reserva @HU-004 @PrioridadAlta
+@HU-004 @Reserva @Hoteles @PrioridadAlta
 Feature: Gestión de Reservas
   Como usuario en TravelNow
   Quiero buscar reservar de hoteles disponibles
   Para poder planificar mi viaje
 
 
-@CreacionReserva @Hoteles @AuthRequerido
+  @SmokeTest @AuthRequerido
   Scenario Outline: Creación de reserva de hotel
     Given que he agregado el "<Hotel>" con <Noches> noches al carrito
     And selecciono las siguientes preferencias para la reserva:
@@ -28,16 +28,16 @@ Feature: Gestión de Reservas
 
       
 
-@CreacionReserva @Hoteles @AuthRequerido
+  @SmokeTest @AuthRequerido
   Scenario: Error al crear reserva de hotel pago rechazado
     Given que he agregado el "Hotel Explora" con 3 noches al carrito
     And he completado los datos de los huéspedes
     When intento pagar con una tarjeta de crédito rechazada o expirada
     Then la reserva no se crea
-    And el sistema de reservas muestra el mensaje de error "Mensaje de ejemplo"
+    And el sistema de reservas muestra el mensaje de error "Pago rechazado. Intente con otra tarjeta."
     But el carrito de compras mantiene los datos del hotel seleccionado
 
-@ReservaInvalida @Restriccion @Hoteles
+  @SmokeTest
   Scenario: Intento de pago de reserva sin haber iniciado sesión
     Given que NO he iniciado sesión en TravelNow
     And que he agregado el "Hotel Explora" con 2 noches al carrito

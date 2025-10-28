@@ -3,6 +3,7 @@ package steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.en.And;
 
 public class CancelacionHotelesSteps {
 
@@ -78,11 +79,6 @@ public class CancelacionHotelesSteps {
     @When("filtro por {string}")
     public void filtroPor(String filtro) {
         System.out.println("Paso: Aplicando filtro: " + filtro);
-    }
-
-    @When("hago clic en el botón {string} de cancelar reserva hotel")
-    public void hagoClicEnElBoton(String boton) {
-        System.out.println("Paso: Clic en botón " + boton);
     }
 
     // ==================== THEN ====================

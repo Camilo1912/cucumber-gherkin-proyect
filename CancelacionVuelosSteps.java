@@ -3,6 +3,7 @@ package steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.en.And;
 
 public class CancelacionVuelosSteps {
 
@@ -58,11 +59,6 @@ public class CancelacionVuelosSteps {
     @When("accedo a mi bandeja de notificaciones")
     public void accedoAMiBandejaDeNotificaciones() {
         System.out.println("Paso: Accediendo a la bandeja de notificaciones.");
-    }
-
-    @When("hago clic en el botón {string} de cancelar reserva vuelo")
-    public void hagoClicEnElBoton(String boton) {
-        System.out.println("Paso: Clic en botón " + boton);
     }
 
     // ==================== THEN ====================

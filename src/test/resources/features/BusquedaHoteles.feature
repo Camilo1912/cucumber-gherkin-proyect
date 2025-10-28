@@ -1,4 +1,4 @@
-@Busqueda @Hoteles @HU-002
+@HU-002 @Busqueda @Hoteles
 Feature: Búsqueda y Filtrado de Hoteles
   Como usuario de la plataforma TravelNow
   Quiero buscar hoteles en un destino y fechas específicas
@@ -15,7 +15,7 @@ Feature: Búsqueda y Filtrado de Hoteles
     Then deberia ver al menos 10 hoteles en la lista de resultados
     And todos los hoteles listados deberían estar en "Cancún"
     
-  @HU-002 @Regression
+  @Regression
   Scenario Outline: Filtrado de hoteles por categoría (estrellas)
     Given he completado una búsqueda exitosa de hoteles en "Nueva York"
     When selecciono la categoria <Estrellas> en los filtros de la pagina

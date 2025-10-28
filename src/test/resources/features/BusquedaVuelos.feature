@@ -1,4 +1,4 @@
-@Busqueda @Vuelos @HU-001
+@HU-001 @Busqueda @Vuelos
 Feature: Búsqueda de Vuelos
   Como usuario de TravelNow
   Quiero buscar vuelos disponibles
@@ -13,7 +13,7 @@ Feature: Búsqueda de Vuelos
     And hago clic en el botón "Buscar" en vuelos
     Then debería ver una lista de vuelos disponibles
 
-  @HU-001 @Regression
+  @Regression
   Scenario Outline: Búsqueda de vuelos a múltiples destinos
     Given que estoy en la página de inicio de TravelNow
     When ingreso <Origen> como ciudad de origen
